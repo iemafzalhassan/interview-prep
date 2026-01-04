@@ -24,9 +24,9 @@ mainSections = ["Interview Prep"]
   navbarSticky = true # true (default) or false
   containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
 
-  # Logo - Disabled to show Text Title "Kubesimplify Interview Prep" (from hugo.toml)
-  logo = ""
-  logoDark = ""
+  # Logo
+  logo = "logo.svg"
+  logoDark = "logo-dark.svg"
 
   ## Button
   navBarButton = false # false (default) or true
@@ -132,7 +132,7 @@ mainSections = ["Interview Prep"]
     suffix = ""
   [seo.favicons]
     sizes = []
-    icon = "" # Disabled - favicon.png is actually an ICO file, not PNG
+    icon = "favicon.png" # Enabled - using new high-res branding asset
     svgIcon = "" # favicon.svg (default) - disabled if file doesn't exist
     maskIcon = "" # mask-icon.svg (default) - disabled if file doesn't exist
     maskIconColor = "white" # white (default)

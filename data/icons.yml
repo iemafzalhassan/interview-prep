@@ -28,8 +28,8 @@ domains:
         label: 'Kubernetes'
         icon: 'fa-solid fa-dharmachakra'
         icon_unicode: 'U+2638'
-        color: '#0ea5e9' # Sky blue
-        hex_alt: '0EA5E9'
+        color: '#05CAFF' # Brand Primary
+        hex_alt: '05CAFF'
         slug: 'k8s'
         description: 'Container orchestration platform'
         order: 1
@@ -39,8 +39,8 @@ domains:
         label: 'DevOps'
         icon: 'fa-solid fa-infinity'
         icon_unicode: 'U+221E'
-        color: '#06b6d4' # Cyan
-        hex_alt: '06B6D4'
+        color: '#05CAFF' # Brand Primary
+        hex_alt: '05CAFF'
         slug: 'devops'
         description: 'Continuous integration & deployment'
         order: 2
@@ -61,8 +61,8 @@ domains:
         label: 'Cloud'
         icon: 'fa-solid fa-cloud'
         icon_unicode: 'U+2601'
-        color: '#06b6d4'
-        hex_alt: '06B6D4'
+        color: '#05CAFF' # Brand Primary
+        hex_alt: '05CAFF'
         slug: 'cloud'
         description: 'Cloud infrastructure & platforms'
         order: 4
@@ -72,8 +72,8 @@ domains:
         label: 'Platform Engineering'
         icon: 'fa-solid fa-layer-group'
         icon_unicode: 'U+1F3D7'
-        color: '#10b981' # Green
-        hex_alt: '10B981'
+        color: '#5CFF68' # Brand Accent
+        hex_alt: '5CFF68'
         slug: 'platform'
         description: 'Internal developer platforms'
         order: 5

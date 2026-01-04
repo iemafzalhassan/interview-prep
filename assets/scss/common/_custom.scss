@@ -3,8 +3,8 @@
 // 1. CSS Variables for Advanced Theming (Kubesimplify Brand)
 :root {
     --font-body: "Outfit", sans-serif;
-    --color-primary: #00d1ff;
-    --color-accent: #6366f1;
+    --color-primary: #05CAFF;
+    --color-accent: #5CFF68;
     --color-accent-2: #a855f7;
 
     --bg-body-light: #f8fafc;
@@ -13,19 +13,19 @@
     --text-secondary-light: #4b5563;
     --border-light: #e2e8f0;
 
-    --bg-body-dark: #0b0f19;
-    --bg-card-dark: #111625;
+    --bg-body-dark: #1B2731;
+    --bg-card-dark: #233340;
     --text-primary-dark: #ffffff;
     --text-secondary-dark: #94a3b8;
     --border-dark: rgba(255, 255, 255, 0.08);
 
-    --ks-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    --ks-glow: 0 0 20px rgba(0, 209, 255, 0.2);
+    --ks-gradient: linear-gradient(135deg, #05CAFF 0%, #5CFF68 100%);
+    --ks-glow: 0 0 20px rgba(5, 202, 255, 0.2);
 }
 
 // 2. SCSS Variable Overrides (Bootstrap/Doks)
 $font-family-sans-serif: "Outfit", sans-serif;
-$primary: #6366f1;
+$primary: #05CAFF;
 $body-bg: var(--bg-body-light);
 $body-color: var(--text-primary-light);
 
@@ -36,8 +36,9 @@ body {
 }
 
 // Dark Mode Support
+// Dark Mode Support
 [data-bs-theme="dark"] {
-    --bs-body-bg: #0b0f19 !important;
+    --bs-body-bg: #1B2731 !important;
     --bs-body-color: #ffffff !important;
     background-color: var(--bg-body-dark) !important;
     color: var(--text-primary-dark) !important;
@@ -93,6 +94,7 @@ body {
 }
 
 @media (max-width: 991px) {
+
     .bento-span-8,
     .bento-span-4,
     .bento-span-6 {
@@ -187,12 +189,12 @@ body {
     padding: 0.8rem 2rem;
     font-weight: 600;
     border-radius: 100px;
-    box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+    box-shadow: 0 4px 14px 0 rgba(5, 202, 255, 0.39);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5); // Enhanced glow
+        box-shadow: 0 10px 25px rgba(5, 202, 255, 0.5); // Enhanced glow
     }
 }
 
@@ -513,7 +515,7 @@ pre {
     // Hover Effects
     &:hover {
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        border-color: rgba(99, 102, 241, 0.3); // Subtle purple tint
+        border-color: rgba(5, 202, 255, 0.3); // Subtle purple tint
 
         &::before {
             height: 6px;
