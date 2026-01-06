@@ -1,0 +1,48 @@
+hero:
+  title: "Unlock Your"
+  title_gradient: "Cloud Native"
+  title_suffix: "Potential"
+  kicker: "Product of Kubesimplify"
+  kicker_icon: "fa-solid fa-code-branch"
+  description: "Curated interview scenarios for DevOps, SRE, and Kubernetes roles. From Beginner to Advanced, master real-world challenges with our expert-led platform."
+  button_primary:
+    text: "Start Learning"
+    url: "/start-learning/"
+    icon: "fa-solid fa-rocket"
+  button_secondary:
+    text: "Star on GitHub"
+    url: "https://github.com/kubesimplify/interview-prep"
+    icon: "fa-brands fa-github"
+
+features:
+  - title: "Production Scenarios"
+    description: "Move beyond theory. We provide detailed **production-grade incidents**, post-mortems, and architectural decision-making challenges used in top-tier tech interviews."
+    icon: "fa-solid fa-server"
+    badge: "Beginner to Expert"
+    color: "primary"
+    span: 8
+    link:
+      text: "Explore SRE Track"
+      url: "/sre/beginner/"
+
+  - title: "Community Powered"
+    description: "A **Kubesimplify** initiative. Join thousands of engineers contributing questions and reviewing answers."
+    icon: "fa-solid fa-users"
+    color: "warning"
+    card_style: "bg-gradient-primary-soft"
+    icon_class: "text-warning"
+    span: 4
+
+  - title: "Kubernetes Tracks"
+    description: "Comprehensive coverage for **CKA, CKAD, and CKS** certifications, plus advanced cluster debugging and security scenarios."
+    icon: "fa-solid fa-dharmachakra"
+    color: "info"
+    icon_class: "text-info"
+    span: 6
+
+  - title: "DevOps & Cloud"
+    description: "Master CI/CD pipelines, **Terraform** state management, Ansible playbooks, and GitOps workflows."
+    icon: "fa-solid fa-infinity"
+    color: "success"
+    icon_class: "text-success"
+    span: 6

@@ -1,0 +1,125 @@
+{{ define "main" }}
+<!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Hero Section -->
+<div class="hero-section pt-5 pb-5">
+  <div class="hero-content text-center mx-auto" style="max-width: 800px;">
+    <!-- Kicker Badge -->
+    <span
+      class="hero-kicker d-inline-block mb-3 px-3 py-1 rounded-pill bg-light text-primary border border-primary-subtle fw-bold"
+      style="font-size: 0.9rem; letter-spacing: 0.5px;">
+      <i class="{{ site.Data.homepage.hero.kicker_icon }} me-2"></i>{{ site.Data.homepage.hero.kicker }}
+    </span>
+
+    <!-- Title -->
+    <h1 class="hero-title mb-4">{{ site.Data.homepage.hero.title }} <span class="gradient-text">{{
+        site.Data.homepage.hero.title_gradient }}</span> {{ site.Data.homepage.hero.title_suffix }}</h1>
+
+    <!-- Description -->
+    <p class="hero-description lead mb-5 text-secondary mx-auto" style="max-width: 700px; font-size: 1.25rem;">
+      {{ site.Data.homepage.hero.description | markdownify }}
+    </p>
+
+    <!-- Actions -->
+    <div class="hero-actions d-flex gap-3 justify-content-center">
+      <a href="{{ site.Data.homepage.hero.button_primary.url }}" class="btn btn-primary btn-lg px-4">
+        <i class="{{ site.Data.homepage.hero.button_primary.icon }} me-2"></i> {{
+        site.Data.homepage.hero.button_primary.text }}
+      </a>
+      <a href="{{ site.Data.homepage.hero.button_secondary.url }}" class="btn btn-secondary btn-lg px-4">
+        <i class="{{ site.Data.homepage.hero.button_secondary.icon }}"></i> {{
+        site.Data.homepage.hero.button_secondary.text }}
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Bento Grid Features Section -->
+<section class="container py-5">
+  <div class="bento-grid">
+    {{ range site.Data.homepage.features }}
+    <div class="bento-span-{{ .span }}">
+      <div class="premium-card {{ .card_style }}" style="height: 100%;">
+        <div class="d-flex align-items-center mb-4 {{ if not .badge }}mb-3{{ end }}">
+          <div
+            class="card-icon {{ if .badge }}me-3 text-primary fs-3 rounded-circle bg-primary-subtle p-3{{ else }}mb-3 fs-2 {{ .icon_class }}{{ end }}">
+            <i class="{{ .icon }}"></i>
+          </div>
+          {{ if .badge }}
+          <div>
+            <h3 class="mb-1 fw-bold">{{ .title }}</h3>
+            <span class="badge bg-light text-primary border">{{ .badge }}</span>
+          </div>
+          {{ end }}
+        </div>
+
+        {{ if not .badge }}
+        <h3 class="{{ if .card_style }}h4{{ end }} fw-bold">{{ .title }}</h3>
+        {{ end }}
+
+        <p class="{{ if .badge }}text-secondary lead{{ else }}text-secondary{{ end }} flex-grow-1" {{ if .badge
+          }}style="font-size: 1.1rem;" {{ end }}>
+          {{ .description | markdownify }}
+        </p>
+
+        {{ if .link }}
+        <a href="{{ .link.url }}"
+          class="text-decoration-none fw-bold text-primary mt-4 d-inline-flex align-items-center">
+          {{ .link.text }} <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- Community Guidelines Section (From README) -->
+<section class="container py-5 mt-4 border-top" style="border-color: var(--border-light) !important;">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">Contributing to the Platform</h2>
+        <p class="text-secondary lead">We welcome contributions! Here is how you can help build the ultimate interview
+          repository.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="premium-card contact-card" style="height: 100%;">
+          <div class="me-3 fs-2 text-primary">1</div>
+          <div>
+            <h4 class="fw-bold">Share Your Ideas</h4>
+            <p class="text-secondary mb-0">Add your questions to our <a
+                href="https://docs.google.com/document/d/1B2wwVwoCUBNquuOhYEr6TZ54pfDTF-JByO2YW_Xaj1M/edit?tab=t.0"
+                target="_blank" class="text-primary">Ideas Google
+                Doc</a>.</p>
+          </div>
+        </div>
+        <div class="premium-card contact-card" style="height: 100%;">
+          <div class="me-3 fs-2 text-primary">2</div>
+          <div>
+            <h4 class="fw-bold">Create an Issue</h4>
+            <p class="text-secondary mb-0">Open a GitHub issue to discuss your contribution.</p>
+          </div>
+        </div>
+        <div class="premium-card contact-card" style="height: 100%;">
+          <div class="me-3 fs-2 text-primary">3</div>
+          <div>
+            <h4 class="fw-bold">Submit a PR</h4>
+            <p class="text-secondary mb-0">Create a Pull Request with clear explanations.</p>
+          </div>
+        </div>
+        <div class="premium-card contact-card" style="height: 100%;">
+          <div class="me-3 fs-2 text-primary">4</div>
+          <div>
+            <h4 class="fw-bold">Review & Merge</h4>
+            <p class="text-secondary mb-0">Maintainers will review your work.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{{ end }}
